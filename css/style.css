@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+*::-moz-selection {
+    background-color: #444343;
+    color: #8f3d3d;
+  }
+
+*::selection {
+    background-color: #444343;
+    color: #8f3d3d;
+  }
+  
+/*----------------------------------------Pagina Inicial---------------------------------------------------*/
+
+.body-principal {
+    background: url(../image/fondo12.avif) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.menu-entrada {
+    height: 100vh;
+    display: grid;
+    padding-left: 15rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "productos giftcard"
+        "nosotros contacto";
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.menu-entrada a.productos:hover {
+    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
+}
+
+.menu-entrada a.giftcard:hover {
+    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
+}
+
+.menu-entrada a.nosotros:hover {
+    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
+}
+
+.menu-entrada a.contacto:hover {
+    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
+}
+
+.bounce-in-fwd{-webkit-animation:bounce-in-fwd 1.8s both;animation:bounce-in-fwd 1s both} 
+    @-webkit-keyframes bounce-in-fwd{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:scale(.7);transform:scale(.7);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:scale(.84);transform:scale(.84);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}89%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:scale(.95);transform:scale(.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}} 
+    @keyframes bounce-in-fwd{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:scale(.7);transform:scale(.7);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:scale(.84);transform:scale(.84);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}89%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:scale(.95);transform:scale(.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
+
+
+.productos {
+    grid-area: productos;
+    background-image: url(../image/productos.png);
+    background-position: 10px;
+    background-position:center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+
+.giftcard {
+    grid-area: giftcard;
+    background-image: url(../image/giftcard.png);
+    background-position: 10px;
+    background-position:center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+
+.nosotros {
+    grid-area: nosotros;
+    background-image: url(../image/nosotros.png);
+    background-position: 10px;
+    background-position:center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+
+.contacto {
+    grid-area: contacto;
+    background-image: url(../image/contacto.png);
+    background-position: 10px;
+    background-position:center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+
+.menu-item {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.336);
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    box-shadow:  1px 1px 10px 1px rgb(44, 43, 43);
+    border-radius: 10%;
+    height: 250px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Yatra One', cursive;
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+}
+
+/*----------------------------------------Menu Navegacion---------------------------------------------------*/
+
+body {
+    background: linear-gradient(
+        90deg,
+        rgb(0, 0, 0) 25%,
+        rgb(25, 25, 26) 73%);
+
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back {
+    background-color: #000000bf;
+    padding: 32px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 45px;
+    font-family: 'PT Serif', serif;
+    color: white;
+    align-items: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    gap: 1rem;
+}
+
+.simbolo {
+    font-size: 35px;
+    font-family: 'PT Serif', serif;
+}
+
+.img-logo {
+    width: 18%;
+    border-radius: 50%;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li a {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'PT Serif', serif;
+    padding: 6px 27px;
+    color: wheat;
+    display: block;
+    letter-spacing: .1rem;
+    transition: .5s;
+}
+
+.menu .navbar ul li a:hover {
+    color: rgba(243, 189, 189, 0.856);
+}
+
+.navbar .active {
+    border-bottom: 2px solid rgb(255, 0, 0);
+    border-radius: 15px;
+}
+
+.navbar a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    transition: .5s;
+}
+
+.navbar a:hover span {
+    transform: scale(1) translateY(0);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/*-------------------------------------------SECCION PRODUCTOS----------------------------------------------------*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "galeriabuzo    buzos"
+        "oversize       galeriaover"
+        "galeriaremera  remeras";
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.buzos {
+    grid-area: buzos;
+    color: #bb9797ab;
+    font-size: 120px;
+    text-shadow: -20px 30px 15px #898585;
+    padding-left: 4rem;
+    padding-top: 15rem;
+}
+
+.galeria-buzos {
+    grid-area: galeriabuzo;
+    width: 600px;
+    margin-top: 100px;
+    padding: 0; 
+    height: 150px;
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.galeria-buzos > a {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgb(8, 8, 8);
+    width: 200px;
+    height: 200px;
+    margin: -100px;
+    transform: rotate(45deg);
+    transition: .5s;
+}
+
+.galeria-buzos img {
+    width: 100%;
+    vertical-align: top;
+    object-fit:cover;
+    object-position:top;
+    transition: transform 0.5s;
+}
+
+.galeria-buzos a:hover img {
+    filter: blur(1.5px);
+    transform: rotate(-20deg) scale(1.3);
+}
+
+.galeria-buzos .item1 {
+    top: 0;
+    left: 0;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .item2 {
+    bottom: 0;
+    left: 25%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .item3 {
+    top: 0;
+    left: 50%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .item4 {
+    top: 200%;
+    left: 50%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .item5 {
+    bottom: 0;
+    left: 75%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .item6 {
+    top: 200%;
+    left: 0;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .item7 {
+    top: 0;
+    left: 100%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .item8 {
+    top: 200%;
+    left: 100%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-buzos .bg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg) scale(1.42);
+}
+
+.oversize {
+    grid-area: oversize;
+    color: #bb9797ab;
+    font-size: 120px;
+    text-shadow: 80px 30px 15px #898585;
+    padding-top: 19rem;
+}
+
+.galeria-over {
+    grid-area: galeriaover;
+    width: 600px;
+    margin-top: 100px;
+    padding: 0;
+    height: 150px;
+    position: absolute;
+    top: 140%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.galeria-over > a {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgb(8, 8, 8);
+    width: 200px;
+    height: 200px;
+    margin: -100px;
+    transform: rotate(45deg);
+    transition: .5s;
+}
+
+.galeria-over img {
+    width: 100%;
+    vertical-align: top;
+    object-fit:cover;
+    object-position:top;
+    transition: transform 0.5s;
+}
+
+.galeria-over a:hover img {
+    filter: blur(1.5px);
+    transform: rotate(-20deg) scale(1.3);
+}
+
+.galeria-over .item9 {
+    top: 0;
+    left: 0;
+    border-radius: 30% 10% 10% 30%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-over .item10 {
+    bottom: 0;
+    left: 25%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-over .item11 {
+    top: 0;
+    left: 50%;
+    border-radius: 30% 30% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-over .item12 {
+    top: 200%;
+    left: 50%;
+    border-radius: 10% 30% 30% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-over .item13 {
+    top: 200%;
+    left: 0;
+    border-radius: 10% 10% 30% 30%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-over .bg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg) scale(1.42);
+}
+
+.remeras {
+    grid-area: remeras;
+    color: #bb9797ab;
+    font-size: 120px;
+    text-shadow: -30px 30px 15px #898585;
+    padding-top: 30rem;
+}
+
+.galeria-remeras {
+    grid-area: galeriaremera;
+    width: 600px;
+    margin-top: 100px;
+    padding: 0;
+    height: 150px;
+    position: absolute;
+    top: 235%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.galeria-remeras > a {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgb(8, 8, 8);
+    width: 200px;
+    height: 200px;
+    margin: -100px;
+    transform: rotate(45deg);
+    transition: .5s;
+}
+
+.galeria-remeras img {
+    width: 100%;
+    vertical-align: top;
+    object-fit:cover;
+    object-position:top;
+    transition: transform 0.5s;
+}
+
+.galeria-remeras a:hover img {
+    filter: blur(1.5px);
+    transform: rotate(-20deg) scale(1.3);
+}
+
+.galeria-remeras .item14 {
+    top: 0;
+    left: 0;
+    border-radius: 30% 10% 10% 30%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-remeras .item15 {
+    bottom: 0;
+    left: 25%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-remeras .item16 {
+    top: 0;
+    left: 50%;
+    border-radius: 30% 10% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-remeras .item17 {
+    top: 100%;
+    left: 75%;
+    border-radius: 10% 10% 30% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-remeras .item18 {
+    top: 0;
+    left: 100%;
+    border-radius: 30% 30% 10% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-remeras .item19 {
+    top: 200%;
+    left: 50%;
+    border-radius: 10% 10% 30% 10%;
+    box-shadow: 5px 5px 10px 1px grey;
+}
+
+.galeria-remeras .bg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg) scale(1.42);
+}
+
+
+/* -------------EFECTO IMAGENES-------------- */
+.light-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.568);
+    transition: transform .5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.light-box img {
+    width: 70vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.light-box:target {
+    transform: scale(1);
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 2px rgb(94, 89, 89);
+}
+
+.next {
+    display: block;
+    background: white;
+    color: black;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40%;
+    box-shadow: 0 0 6px 2px rgb(94, 89, 89);
+}
+
+/*----------------------------------------------SECCION PRODUCTOS----------------------------------------------------*/
+
+.conteiner__giftcard {
+    padding-top: 8rem;
+    padding-inline: 5rem;
+    margin-top: 2rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.titulo__gifcard {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: .5rem;
+    text-decoration: underline 1px solid white;
+    font-size: 5rem;
+    font-family: 'PT Serif', serif;
+}
+
+.parrafo {
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family:  Geneva;
+    letter-spacing: .14rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+
+/*----------------------------------------------SECCION NOSOTROS----------------------------------------------------*/
+
+.conteiner__nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.titulo__nosotros {
+    color: white;
+    text-decoration: underline 1px solid white;
+    font-size: 5rem;
+    font-family: 'PT Serif', serif;
+}
+        
+.img__nosotros {
+    filter: contrast(60%);
+    border-radius: 25%;
+    width: 1000px;
+}
+
+.contenido__principal {
+    padding-top: 5rem;
+    padding-inline: 14rem;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-family: 'Yatra One', cursive;
+}
+
+/*----------------------------------------------SECCION CONTACTO----------------------------------------------------*/
+
+.form__contacto {
+    display: flex;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contact {
+    width: 50%;
+}
+
+.InfoContacto {
+    color: white;
+    padding: 6rem 5rem;
+}
+
+.contact h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 4rem;
+}
+
+.contact p {
+    border-bottom: 1px solid white;
+    padding: 0.5rem 0 1rem 0;
+    font-family: 'Yatra One', cursive;
+    font-weight: 800;
+}
+
+.formulario {
+    width: 50%;
+}
+
+.formulario h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 2rem;
+    color: white;
+    text-align: start;
+}
+
+.InfoForm {
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.InfoForm .form-colum {
+    border-radius: .3rem;
+    border: 1px solid black;
+}
+
+.form-colum {
+    height: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .8rem;
+    padding-left: .5rem;
+}
+
+.btn {
+    width: max-content;
+    background-color: #252424;
+    color: white;
+    border: 1px solid white;
+    font-size: 0.9rem;
+    padding: .5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    text-transform: uppercase;
+}
+
+
+/*----------------------------------------------------FOOTER----------------------------------------------------------*/
+
+.footer-principal {
+    margin-top: 15rem;
+}
+
+.ft-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 3rem;
+    gap: 10rem;
+    border-top: 1px solid #413d3d;
+    padding-top: 6rem;
+}
+
+.ft-container .descripcion {
+    font-style: oblique;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.footer-secundario {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-inline: 0px;
+    padding-block: 10px;
+}
+
+.footer-secundario .footer-menu {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-secundario .footer-menu a {
+    color: white;
+    text-decoration: none;
+    border-left: 1px solid white;
+    padding-left: 10px;
+}
+
+.footer-secundario .redes li {
+    display: inline-block;
+}
+
+.footer-secundario .redes a{
+    padding: 10px;
+}
+
+.footer-secundario .redes a img {
+    height: 25px;
+}
+
+.footer-pagos {
+    padding: 5px;
+    height: 40px;
+    margin-bottom: 50px;
+}
+
+/*----------------------------------Media Quaries Barra de Navegacion---------------------------------------------*/
+
+@media screen and (max-width: 991px) {
+
+    .menu {
+        padding-inline: 30px;
+        padding-block: 15px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .back {
+        padding: 47px 0;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0a0a0a;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+}
