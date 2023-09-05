@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -23,46 +21,50 @@
   
 /*----------------------------------------Pagina Inicial---------------------------------------------------*/
 
-.body-principal {
-    background: url(../image/fondo12.avif) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
+video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
 }
 
 .menu-entrada {
     height: 100vh;
     display: grid;
-    padding-left: 15rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-        "productos giftcard"
-        "nosotros contacto";
+        "titulo     titulo  titulo   titulo"
+        "productos giftcard nosotros contacto";
     justify-content: center;
-    text-align: center;
     align-items: center;
+    text-align: center;
 }
 
-.menu-entrada a.productos:hover {
-    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
+.titulo-inicio {
+    grid-area: titulo;
+    font-family: 'PT Serif', serif;
+    letter-spacing: 1rem;
+    font-style: oblique;
+    border: 1px solid grey;
+    height: 250px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px 100px 80px inset grey;
+    border-radius: 1rem;
 }
 
-.menu-entrada a.giftcard:hover {
-    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
-}
 
-.menu-entrada a.nosotros:hover {
-    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
-}
-
-.menu-entrada a.contacto:hover {
-    filter: drop-shadow(1px 1px 1px rgb(112, 111, 111));
-}
-
-.bounce-in-fwd{-webkit-animation:bounce-in-fwd 1.8s both;animation:bounce-in-fwd 1s both} 
-    @-webkit-keyframes bounce-in-fwd{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:scale(.7);transform:scale(.7);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:scale(.84);transform:scale(.84);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}89%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:scale(.95);transform:scale(.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}} 
-    @keyframes bounce-in-fwd{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:scale(.7);transform:scale(.7);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:scale(.84);transform:scale(.84);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}89%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:scale(.95);transform:scale(.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
-
+.text-pop-up-left{
+    font-size: 85px;
+    color: #000000a6;
+    animation:text-pop-up-left 3s cubic-bezier(.25,.46,.45,.94) infinite alternate both}
+    @keyframes text-pop-up-left{0%{transform:translateX(0);transform-origin:50% 50%;text-shadow:none}100%{transform:translateX(-50px);transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
 
 .productos {
     grid-area: productos;
@@ -101,20 +103,26 @@
 }
 
 .menu-item {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.336);
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    box-shadow:  1px 1px 10px 1px rgb(44, 43, 43);
+    color: #000000;
+    background-color: rgb(129 129 129 / 37%);
+    border-left: 6px solid #ffffff;
+    border-top: 14px solid #8f8f8f;
+    border-bottom: 1px solid white;
+    box-shadow: 0 7px 10px 10px rgb(0 0 0);
     border-radius: 10%;
-    height: 250px;
-    width: 350px;
+    height: 388px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Yatra One', cursive;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bolder;
     letter-spacing: .3rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-20px);
+    transition: .6s;
 }
 
 /*----------------------------------------Menu Navegacion---------------------------------------------------*/
@@ -124,7 +132,6 @@ body {
         90deg,
         rgb(0, 0, 0) 25%,
         rgb(25, 25, 26) 73%);
-
 }
 
 .container {
@@ -244,6 +251,111 @@ body {
     text-align: center;
     align-items: center;
 }
+
+.btn-buzo-jo {
+    top: 40%;
+    left: 150%;
+    width: 6em;
+    position: relative;
+    height: 3em;
+    border: 3px ridge #856d6e;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 1em;
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+  .btn-buzo-jo::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #19191a;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .btn-buzo-jo::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #19191a;
+    transition: 0.5s;
+  }
+  
+  .btn-buzo-jo:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  .btn-buzo-jo:hover {
+    box-shadow: inset 0px 0px 25px #856d6e;
+  }
+
+.btn-over {
+    top: 45%;
+    left: -55%;
+    width: 6em;
+    position: relative;
+    height: 3em;
+    border: 3px ridge #856d6e;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 1em;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.reme {
+    top: 30%;
+    left: 140%;
+}
+  
+.btn-over::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+.btn-over::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+  }
+  
+.btn-over:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+.btn-over:hover {
+    box-shadow: inset 0px 0px 25px #856d6e;
+  }
+
+  .blank {
+    color: white;
+  }
 
 .buzos {
     grid-area: buzos;
