@@ -704,7 +704,7 @@ body {
 /*----------------------------------------------SECCION PRODUCTOS----------------------------------------------------*/
 
 .conteiner__giftcard {
-    padding-top: 8rem;
+    padding-top: 4rem;
     padding-inline: 5rem;
     margin-top: 2rem;
     margin-left: 15rem;
@@ -729,11 +729,14 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    font-family:  Geneva;
-    letter-spacing: .14rem;
+    font-family: 'Yatra One', cursive;
+    letter-spacing: .10rem;
     margin-top: 2rem;
     padding: 1rem;
-    text-transform: uppercase;
+    border: 2px solid #000000;
+    border-radius: 31px;
+    box-shadow: 20px 20px 60px #695454, 11px 10px 15px 5px #ffffff;
+    background-image: linear-gradient(99deg, rgb(93 92 92 / 0%), rgb(241 241 241 / 28%));
 }
 
 
@@ -745,7 +748,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 4rem;
 }
 
 .titulo__nosotros {
@@ -813,7 +816,7 @@ body {
 }
 
 .InfoForm {
-    padding: 6rem 4rem;
+    padding: 8rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -918,7 +921,13 @@ body {
 /*----------------------------------Media Quaries Barra de Navegacion---------------------------------------------*/
 
 @media screen and (max-width: 991px) {
+    
+/*--------First Mobile Pagina Inicio                        991px ------------*/ 
+    .text-pop-up-left {
+        font-size: 65px;
+    }
 
+/*--------First Mobile Barra Navegacion                     991px ------------*/
     .menu {
         padding-inline: 30px;
         padding-block: 15px;
@@ -941,12 +950,255 @@ body {
         display: none;
     }
 
+    .navbar .active {
+        border: none;
+    }
+
+    .navbar a span {
+        border: none;
+    }
+
     .menu .navbar ul li {
         width: 100%;
+        padding-block: 1.5rem;
+    }
+
+    .menu .navbar ul li a {
+        font-size: 25px
     }
 
     #menu:checked ~ .navbar {
         display: initial;
+        height: 100vh;
+        background: #000000e8;
+        text-align: center;
+        padding: 2rem;
     }
 
+/*--------First Mobile Seccion Productos                        991px------------*/
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buzos {
+        padding-top: 1.5rem;
+    }
+    
+    .galeria-buzos {
+        top: 53%;
+        left: 50%;
+    }
+
+    .btn-buzo-jo {
+        top: 31rem;
+        left: -40%;
+    }
+
+    .btn-buzo-jo::before {
+        background-color: #020202;
+    }
+
+    .btn-buzo-jo::after {
+        background-color: #030303;
+    }
+
+    .oversize {
+        position: relative;
+        top: 25rem;
+    }
+    
+    .galeria-over {
+        top: 180%;
+        left: 65%;
+    }
+
+    .btn-over {
+        top: 41rem;
+        left: -30%;
+    }
+
+    .remeras {
+        position: relative;
+        top: 31rem;
+    }
+
+    .galeria-remeras {
+        top: 305%;
+        left: 50%;
+    }
+
+    .reme {
+        top: 96rem;
+        left: -30%;
+    }
+
+    .ft-prod {
+        margin-top: 68rem;
+    }
+}
+
+@media screen and (max-width: 772px) {
+
+/*--------First Mobile Seccion Productos                        772px------------*/
+    .galeria-buzos {
+        width: 520px;
+        height: 120px;
+    }
+
+    .galeria-buzos > a {
+        width: 170px;
+        height: 170px;
+        margin: -85px;
+    }
+
+    .btn-buzo-jo {
+        top: 41rem;
+        left: -17%;
+    }
+
+    .btn-buzo-jo::before {
+        background-color: #05050500;
+    }
+
+    .btn-buzo-jo::after {
+        background-color: #05050500;
+    }
+
+    .oversize {
+        font-size: 100px;
+        top: 21rem;
+    }
+
+    .galeria-over {
+        width: 520px;
+        height: 120px;
+    }
+
+    .galeria-over > a {
+        width: 170px;
+        height: 170px;
+        margin: -85px;
+    }
+
+    .btn-over {
+        top: 33rem;
+        left: 35%;
+    }
+
+    .btn-over::before {
+        background-color: #05050500;
+    }
+
+    .btn-over::after {
+        background-color: #05050500;
+    }
+
+    .remeras {
+        top: 20rem;
+    }
+
+    .galeria-remeras {
+        width: 520px;
+        height: 120px;
+    }
+
+    .galeria-remeras > a {
+        width: 170px;
+        height: 170px;
+        margin: -85px;
+    }
+
+    .reme {
+        top: 84rem;
+        left: -30%;
+    }
+
+    .ft-prod {
+        margin-top: 54rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /*--------First Mobile Seccion Productos                        480px------------*/
+
+    .buzos {
+        font-size: 50px;
+        padding-top: 4.5rem;
+        padding-left: 0;
+    }
+
+    .galeria-buzos {
+        width: 302px;
+        height: 100px;
+        top: 40%;
+        left: 49%;
+    }
+
+    .galeria-buzos > a {
+        width: 110px;
+        height: 109px;
+        margin: -54px;
+    }
+
+    .btn-buzo-jo {
+        top: 35rem;
+    }
+
+    .oversize {
+        font-size: 50px;
+        text-shadow: 12px 20px 15px #898585;
+        top: 12rem;
+    }
+
+    .galeria-over {
+        width: 388px;
+        height: 96px;
+        top: 135%;
+        left: 60%;
+    }
+
+    .galeria-over > a {
+        width: 120px;
+        height: 120px;
+        margin: -64px;
+    }
+    
+    .btn-over {
+        top: 21rem;
+        left: 30%;
+    }
+
+    .remeras {
+        top: 4rem;
+        font-size: 50px;
+    }
+
+    .galeria-remeras {
+        width: 302px;
+        height: 100px;
+        top: 225%;
+        left: 49%;
+    }
+
+    .galeria-remeras > a {
+        width: 110px;
+        height: 109px;
+        margin: -54px;
+    }
+
+    .reme {
+        top: 60rem;
+    }
+
+    .ft-prod {
+        margin-top: 33rem;
+    }
+
+    .ft-container {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
 }
