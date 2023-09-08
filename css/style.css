@@ -1324,7 +1324,7 @@ body {
     }
 
     .ft-container {
-        gap: 1rem;
+        gap: 0rem;
     }
 
     .ft-container .imagen {
