@@ -23,8 +23,8 @@
 
 video {
     position: fixed;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vh;
+    min-height: 100vh;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -32,17 +32,16 @@ video {
 }
 
 .menu-entrada {
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "titulo     titulo  titulo   titulo"
-        "productos giftcard nosotros contacto";
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    grid-template-rows: .7fr 1fr;
+    grid-template-areas:
+    "titulo     titulo  titulo  titulo"
+    "productos giftcard nosotros contacto";
+
+}    
 
 .titulo-inicio {
     grid-area: titulo;
@@ -50,7 +49,6 @@ video {
     letter-spacing: 1rem;
     font-style: oblique;
     border: 1px solid grey;
-    height: 250px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -60,8 +58,8 @@ video {
 }
 
 
-.text-pop-up-left{
-    font-size: 85px;
+.titulo-marca{
+    font-size: 5rem;
     color: #000000a6;
     animation:text-pop-up-left 3s cubic-bezier(.25,.46,.45,.94) infinite alternate both}
     @keyframes text-pop-up-left{0%{transform:translateX(0);transform-origin:50% 50%;text-shadow:none}100%{transform:translateX(-50px);transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
@@ -110,7 +108,6 @@ video {
     border-bottom: 1px solid white;
     box-shadow: 0 7px 10px 10px rgb(0 0 0);
     border-radius: 10%;
-    height: 388px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -927,8 +924,18 @@ body {
 @media screen and (max-width: 991px) {
     
 /*--------First Mobile Pagina Inicio                        991px ------------*/ 
-    .text-pop-up-left {
-        font-size: 65px;
+    
+    .menu-entrada {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas:
+        "titulo titulo"
+        "productos giftcard"
+        "nosotros contacto";
+    }
+
+    .titulo-marca {
+        font-size: 3.5rem;
     }
 
 /*--------First Mobile Barra Navegacion                     991px ------------*/
@@ -1064,20 +1071,12 @@ body {
 
 /*--------First Mobile Pagina Inicio                          772px------------*/
 
-    .menu-entrada {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            "titulo     titulo "
-            "productos  giftcard" 
-            "nosotros   contacto";
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .menu-item {
-        height: 198px;
+    .titulo-marca {
+        font-size: 3.5rem;
+        animation: none;
+        color: white;
+        text-shadow: 11px 9px 6px black;
+        letter-spacing: .4rem;
     }
 
 /*--------First Mobile Seccion Productos                        772px------------*/
@@ -1160,6 +1159,10 @@ body {
         margin-top: 54rem;
     }
 
+    .ft-container {
+        gap: 4rem;
+    }
+
 /*--------First Mobile Seccion Nosotros                        772px------------*/
 
     .img__nosotros {
@@ -1181,9 +1184,11 @@ body {
 @media screen and (max-width: 480px) {
 
     /*--------First Mobile Pagina Inicio                          480px------------*/
+ 
     .menu-entrada {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
             "titulo"
             "productos"
@@ -1192,23 +1197,23 @@ body {
             "contacto";
     }
 
-    .titulo-inicio {
-        height: 181px;
+    .titulo-marca {
+        font-size: 2.5rem;
+        letter-spacing: .1rem;
+        text-shadow: 8px 8px 7px #d5cdcd;
     }
 
-    .text-pop-up-left {
-        font-size: 55px;
-        animation: none;
-        text-shadow: 4px 5px 7px white;
-        letter-spacing: .5rem;
+    .titulo-inicio {
+        box-shadow: 1px 1px 100px 70px inset #2b2727;
     }
 
     .menu-item {
-        height: 115px;
-        border-radius: 1rem;
+        color: white;
         border-left: 4px solid #ffffff;
-        border-top: 7px solid #8f8f8f;
-        border-bottom: 2px solid white;
+        border-top: 4px solid #8f8f8f;
+        border-bottom: 1px solid white;
+        box-shadow: 3px -5px 10px 10px rgb(0 0 0);
+        border-radius: 6%;
     }
 
     /*--------First Mobile Seccion Productos                        480px------------*/
@@ -1222,8 +1227,8 @@ body {
     .galeria-buzos {
         width: 302px;
         height: 100px;
-        top: 40%;
-        left: 49%;
+        top: 35%;
+        left: 58%;
     }
 
     .galeria-buzos > a {
@@ -1232,21 +1237,36 @@ body {
         margin: -54px;
     }
 
+    .galeria-buzos .item7 {
+        top: 300%;
+        left: 75%;
+    }
+
+    .galeria-buzos .item8 {
+        top: 300%;
+        left: 25%;
+    }
+
     .btn-buzo-jo {
-        top: 35rem;
+        top: 39rem;
+        left: -8rem;
     }
 
     .oversize {
         font-size: 50px;
         text-shadow: 12px 20px 15px #898585;
-        top: 12rem;
+        top: 15rem;
     }
 
     .galeria-over {
-        width: 366px;
-        height: 93px;
+        width: 327px;
+        height: 99px;
         top: 125%;
-        left: 60%;;
+        left: 60%;
+    }
+
+    .galeria-over .item10 {
+        bottom: 8%;
     }
 
     .galeria-over > a {
@@ -1256,8 +1276,8 @@ body {
     }
     
     .btn-over {
-        top: 24rem;
-        left: 30%;
+        top: 25rem;
+        left: 29%;
     }
 
     .remeras {
@@ -1272,6 +1292,22 @@ body {
         left: 49%;
     }
 
+    .galeria-remeras .item14 {
+        top: 300%;
+        left: 25%;
+        border-radius: 10% 10% 30% 10%;
+    }
+
+    .galeria-remeras .item18 {
+        top: 300%;
+        left: 75%;
+        border-radius: 10% 10% 30% 10%;
+    }
+
+    .galeria-remeras .item19 {
+        border-radius: 10% 10% 10% 10%;
+    }
+
     .galeria-remeras > a {
         width: 110px;
         height: 109px;
@@ -1280,16 +1316,29 @@ body {
 
     .reme {
         top: 57rem;
+        left: -8rem;
     }
 
     .ft-prod {
-        margin-top: 33rem;
+        margin-top: 36rem;
     }
 
     .ft-container {
         gap: 1rem;
-        display: flex;
-        flex-direction: column;
+    }
+
+    .ft-container .imagen {
+        margin-inline: 1.6rem;
+        width: 5rem;
+    }
+
+    .ft-container .imagen {
+        margin-inline: 1.6rem;
+        width: 5rem;
+    }
+
+    .ft-container .descripcion {
+        font-size: .6rem;
     }
 
 /*--------First Mobile Seccion GiftCard                        480px------------*/
@@ -1358,4 +1407,6 @@ body {
         padding: 1px;
         height: 25px;
     }
+
+    
 }
