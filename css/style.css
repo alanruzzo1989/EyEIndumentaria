@@ -927,6 +927,34 @@
         padding: 1px;
         height: 25px;
     }
+}
 
+@media screen and (max-width: 580px) {
     
+    .tit-bz{
+        padding-left: 7rem;
+        font-size: 70px;
+    }
+
+    .buzos {
+        padding-inline: 2rem;
+    }
+
+    .tit-over {
+        padding-right: 1rem;
+        font-size: 80px;
+    }
+
+    .over580 {
+        padding-inline: 2rem;
+    }
+
+    .tit-remeras {
+        padding-left: 3rem;
+        font-size: 80px;
+    }
+
+    .remera580 {
+        padding-inline: 2rem;
+    }
 }
