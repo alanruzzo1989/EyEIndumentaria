@@ -726,25 +726,32 @@
 
 /*--------First Mobile Seccion Productos                        772px------------*/
     
+    .tit-bz {
+        padding-left: 8rem;
+        font-size: 90px;
+    }
+
+    .buzos {
+        padding-inline: 5rem
+    }
+
     .tit-over {
-        padding-right: 5rem;
+        padding-right: 3rem;
+        font-size: 90px;
     }
 
     .over580 {
-        padding-inline: 3rem;
+        padding-inline: 5rem;
     }
 
     .tit-remeras {
         padding-left: 5rem;
+        font-size: 90px;
     }
 
     .remera580 {
-        padding-inline: 3rem;
+        padding-inline: 5rem;
     }
-
-
-
-
 
 /*--------First Mobile Seccion Nosotros                        772px------------*/
 
@@ -756,12 +763,23 @@
         padding-inline: 3rem;
     }
 
-/*--------First Mobile Seccion Nosotros                        772px------------*/
+/*--------First Mobile Seccion Contacto                        772px------------*/
 
     .contact h2 {
         font-size: 3rem;
     }
 
+
+/*--------First Mobile FOOTER                                  772px------------*/
+    
+    .ft-container {
+        gap: 2rem;
+    }
+
+    .ft-container .imagen {
+        margin-inline: 1.6rem;
+        width: 5rem;
+    }    
 }
 
 @media screen and (max-width: 580px) {
