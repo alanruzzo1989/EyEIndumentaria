@@ -958,3 +958,52 @@
         padding-inline: 1rem;
     }
 }
+
+@media screen and (max-width: 385px) {
+
+    .tit-bz {
+        padding-left: 5rem;
+        font-size: 50px;
+    }
+
+    .buzos {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 150px;
+        height: 230px;
+    }
+
+    .tit-over {
+        padding-right: 3rem;
+        font-size: 50px;
+    }
+
+    .tit-remeras {
+        padding-left: 2rem;
+        font-size: 50px;
+    }
+
+    .over580 {
+        gap: 1rem;
+    }
+
+    .remera580 {
+        gap: 1rem;
+    }
+
+    .ft-container {
+        margin-left: 1rem
+    }
+
+
+    .ft-container .imagen {
+        margin-inline: 1.4rem;
+        width: 4rem;
+    }
+
+    .ft-container .descripcion {
+        font-size: .5rem;
+    }
+}
