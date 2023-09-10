@@ -234,7 +234,6 @@
     gap: 2rem;
     column-gap: 3rem;
     padding-inline: 7rem;
-    position: relative;
 }
 
 .tit-over {
@@ -255,7 +254,6 @@
     gap: 2rem;
     column-gap: 3rem;
     padding-inline: 7rem;
-    position: relative;
 }
 
 .tit-remeras {
@@ -275,7 +273,6 @@
     gap: 2rem;
     column-gap: 3rem;
     padding-inline: 7rem;
-    position: relative;
 }
 
 .card {
@@ -959,51 +956,50 @@
     }
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 420px) {
+
+    .seccion {
+        display: flex;
+        flex-direction: column;
+    }
 
     .tit-bz {
-        padding-left: 5rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
         font-size: 50px;
+        padding: 0rem
     }
 
     .buzos {
-        gap: 1rem;
-    }
-
-    .card {
-        width: 150px;
-        height: 230px;
+        padding-inline: 0.5rem;
+        column-gap: 1rem;
     }
 
     .tit-over {
-        padding-right: 3rem;
-        font-size: 50px;
-    }
-
-    .tit-remeras {
-        padding-left: 2rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding-right: 0;
         font-size: 50px;
     }
 
     .over580 {
-        gap: 1rem;
+        padding-inline: 0.5rem;
+        column-gap: 1rem;
+    }
+
+    .tit-remeras {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding-left: 0;
+        font-size: 50px;
     }
 
     .remera580 {
-        gap: 1rem;
-    }
-
-    .ft-container {
-        margin-left: 1rem
-    }
-
-
-    .ft-container .imagen {
-        margin-inline: 1.4rem;
-        width: 4rem;
-    }
-
-    .ft-container .descripcion {
-        font-size: .5rem;
+        padding-inline: 0.5rem;
+        column-gap: 1rem;
     }
 }
