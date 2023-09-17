@@ -21,8 +21,9 @@
   
 /*----------------------------------------Pagina Inicial---------------------------------------------------*/
 
-
-
+.body-inicio {
+    background-color: black;
+}
 
 .menu-entrada {
     min-height: 100vh;
@@ -33,13 +34,14 @@
     grid-template-areas:
     "titulo     titulo  titulo  titulo"
     "productos giftcard nosotros contacto";
+    background-image: radial-gradient(circle at top, #ff000000, #ffffff61, #371212);
 
 }    
 
 .titulo-inicio {
     grid-area: titulo;
     font-family: 'PT Serif', serif;
-    letter-spacing: 1rem;
+    letter-spacing: .3rem;
     font-style: oblique;
     border: 1px solid grey;
     justify-content: center;
@@ -47,53 +49,62 @@
     align-items: center;
     text-align: center;
     border-radius: 1rem;
-    box-shadow: 1px 1px 100px 70px inset #2b2727;
-    background: repeating-linear-gradient(35deg, black, #635e5ecf 100px);
 }
-
 
 .titulo-marca{
     font-size: 5rem;
-    color: #000000a6;
+    color: #db7676a6;
     animation:text-pop-up-left 3s cubic-bezier(.25,.46,.45,.94) infinite alternate both}
     @keyframes text-pop-up-left{0%{transform:translateX(0);transform-origin:50% 50%;text-shadow:none}100%{transform:translateX(-50px);transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
 
 .productos {
     grid-area: productos;
+    background-image: url(../image/shopping-cart-2-line.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .giftcard {
     grid-area: giftcard;
+    background-image: url(../image/gift-line.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .nosotros {
     grid-area: nosotros;
+    background-image: url(../image/group-fill.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .contacto {
     grid-area: contacto;
+    background-image: url(../image/mail-send-line.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .menu-item {
-    color: #000000;
-    background-image: linear-gradient(53deg, black, #3530301a, black);
-    border-left: 6px solid #ffffff;
-    border-top: 14px solid #8f8f8f;
+    color: wheat;
+    border-left: 6px solid #eb7878;
+    border-right: 6px solid #eb7878;
+    border-top: 6px solid #a77272;
     border-bottom: 1px solid white;
     box-shadow: 0 7px 10px 10px rgb(0 0 0);
-    border-radius: 10%;
+    border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Yatra One', cursive;
     font-size: 2rem;
     font-weight: bolder;
-    letter-spacing: .7rem;
 }
 
 .menu-item:hover {
     transform: translateY(-20px);
     transition: .6s;
+    background: linear-gradient(to top, rgba(88, 88, 88, 0.548), rgba(231, 73, 73, 0.459));
 }
 
 /*----------------------------------------Menu Navegacion---------------------------------------------------*/
@@ -626,6 +637,11 @@
         "nosotros contacto";
     }
 
+    .menu-item {
+        font-size: 1.6rem;
+        letter-spacing: .7rem;
+    }
+
     .titulo-marca {
         font-size: 3.5rem;
     }
@@ -720,8 +736,8 @@
     .titulo-marca {
         font-size: 3.5rem;
         animation: none;
-        color: white;
-        text-shadow: 11px 9px 6px black;
+        color: #d33131a6;
+        text-shadow: 2px 4px 4px rgb(255 255 255);
         letter-spacing: .4rem;
     }
 
@@ -800,20 +816,20 @@
     }
 
     .titulo-marca {
-        font-size: 2.5rem;
+        font-size: 3rem;
         letter-spacing: .1rem;
-        text-shadow: 8px 8px 7px #d5cdcd;
     }
 
     .titulo-inicio {
         box-shadow: 1px 1px 100px 70px inset #2b2727;
-        background: repeating-linear-gradient(35deg, black, #635e5ecf 100px);
     }
 
     .menu-item {
-        border: none;
-        box-shadow: inset -4px 2px 10px 0px rgb(249 234 234);
-        border-radius: 4%;
+        border-radius: 5%;
+        border-left: 6px solid #eb7878;
+        border-right: 6px solid #eb7878;
+        border-top: 6px solid #a77272;
+        border-bottom: 1px solid white;
     }
 
     /*--------First Mobile Seccion Productos                        580px------------*/
