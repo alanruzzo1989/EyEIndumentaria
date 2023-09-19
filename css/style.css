@@ -34,16 +34,16 @@
     grid-template-areas:
     "titulo     titulo  titulo  titulo"
     "productos giftcard nosotros contacto";
-    background-image: radial-gradient(circle at top, #ff000000, #ffffff61, #371212);
+    background-image: black;
 
 }    
 
 .titulo-inicio {
     grid-area: titulo;
     font-family: 'PT Serif', serif;
-    letter-spacing: .3rem;
+    letter-spacing: .2rem;
     font-style: oblique;
-    border: 1px solid grey;
+    border: inset 1px solid grey;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -51,11 +51,91 @@
     border-radius: 1rem;
 }
 
+video {
+	object-fit: cover;
+    height: 40vh;
+    width: 100vw;
+    border-radius: 1rem;
+}
+
 .titulo-marca{
-    font-size: 5rem;
-    color: #db7676a6;
-    animation:text-pop-up-left 3s cubic-bezier(.25,.46,.45,.94) infinite alternate both}
-    @keyframes text-pop-up-left{0%{transform:translateX(0);transform-origin:50% 50%;text-shadow:none}100%{transform:translateX(-50px);transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
+	position: absolute;
+	top: 5%;
+	left: 20%;
+	color: #ddd;
+	font-size: 5rem;
+    letter-spacing: 0rem;
+    color: white;
+    text-shadow: 10px 3px 20px white;
+}
+ 
+.titulo-marca span {
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}    
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotateY(90deg);
+		filter: blur(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateY(0deg);
+		filter: blur(0);
+	}
+}
+
+.titulo-marca span:nth-child(1){
+	animation-delay:1s ;
+}
+.titulo-marca span:nth-child(2){
+	animation-delay:1.5s ;
+}
+.titulo-marca span:nth-child(3){
+	animation-delay:2s ;
+}
+.titulo-marca span:nth-child(4){
+	animation-delay:2s ;
+}
+.titulo-marca span:nth-child(5){
+	animation-delay:.5s ;
+}
+.titulo-marca span:nth-child(6){
+	animation-delay:.5s ;
+}
+.titulo-marca span:nth-child(7){
+	animation-delay:.5s ;
+}
+.titulo-marca span:nth-child(8){
+	animation-delay:.5s ;
+}
+.titulo-marca span:nth-child(9){
+	animation-delay:1s ;
+}
+.titulo-marca span:nth-child(10){
+	animation-delay:1.5s ;
+}
+.titulo-marca span:nth-child(11){
+	animation-delay:2s ;
+}
+.titulo-marca span:nth-child(12){
+	animation-delay:2s ;
+}
+.titulo-marca span:nth-child(13){
+	animation-delay:2.5s ;
+}
+.titulo-marca span:nth-child(14){
+	animation-delay:3s ;
+}
+.titulo-marca span:nth-child(15){
+	animation-delay:3.5s ;
+}
+.titulo-marca span:nth-child(16){
+	animation-delay:4s ;
+}
 
 .productos {
     grid-area: productos;
@@ -87,11 +167,8 @@
 
 .menu-item {
     color: wheat;
-    border-left: 6px solid #eb7878;
-    border-right: 6px solid #eb7878;
-    border-top: 6px solid #a77272;
-    border-bottom: 1px solid white;
-    box-shadow: 0 7px 10px 10px rgb(0 0 0);
+    border: 1px solid black;
+    box-shadow: inset 7px 5px 20px 8px #252424;
     border-radius: 5%;
     display: flex;
     justify-content: center;
@@ -773,13 +850,13 @@
 
 /*--------First Mobile Pagina Inicio                          772px------------*/
 
-    .titulo-marca {
+    /* .titulo-marca {
         font-size: 3.5rem;
         animation: none;
         color: #d33131a6;
         text-shadow: 2px 4px 4px rgb(255 255 255);
         letter-spacing: .4rem;
-    }
+    } */
 
 /*--------First Mobile Seccion Productos                        772px------------*/
     
@@ -846,7 +923,7 @@
     .menu-entrada {
         display: grid;
         grid-template-columns: 1fr ;
-        grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr .5fr .5fr .5fr .5fr;
         grid-template-areas:
             "titulo"
             "productos"
@@ -856,6 +933,15 @@
     }
 
     .titulo-marca {
+        left: 5%;
+        font-size: 3rem;
+    }
+
+    video {
+        height: 25vh;
+    }
+
+    /* .titulo-marca {
         font-size: 3rem;
         letter-spacing: .1rem;
     }
@@ -870,7 +956,7 @@
         border-right: 6px solid #eb7878;
         border-top: 6px solid #a77272;
         border-bottom: 1px solid white;
-    }
+    } */
 
     /*--------First Mobile Seccion Productos                        580px------------*/
 
