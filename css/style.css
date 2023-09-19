@@ -933,8 +933,9 @@ video {
     }
 
     .titulo-marca {
-        left: 5%;
-        font-size: 3rem;
+        left: 12%;
+        top: 8%;
+        font-size: 2.5rem;
     }
 
     video {
